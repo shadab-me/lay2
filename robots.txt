@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Sitemap: https://gillhospital.com/sitemap.xml
+Sitemap: https://gillhospital.com/news-sitemap.xml
+Sitemap: https://gillhospital.com/hi-sitemap.xml
+
+# Prevent indexing of search results
+Disallow: /search
+Disallow: /*?q=*
+
+# Allow crawling of images
+Allow: /img/ 

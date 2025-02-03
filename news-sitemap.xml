@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://gillhospital.com/news/laparoscopic-surgery-technique</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Gill Hospital</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-15T08:00:00+05:30</news:publication_date>
+      <news:title>Gill Hospital Pioneers New Laparoscopic Surgery Technique</news:title>
+      <news:keywords>Laparoscopic Surgery, Dr Avnish Kumar Gill, Gill Hospital, Dhanaura Healthcare</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://gillhospital.com/news/free-medical-camp</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Gill Hospital</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2023-12-20T10:00:00+05:30</news:publication_date>
+      <news:title>Free Medical Camp Serves Over 500 Patients</news:title>
+      <news:keywords>Free Medical Camp, Healthcare Initiative, Community Service, Gill Hospital Dhanaura</news:keywords>
+    </news:news>
+  </url>
+</urlset> 

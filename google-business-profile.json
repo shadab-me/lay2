@@ -1,0 +1,34 @@
+{
+  "name": "Gill Hospital & Clinic",
+  "address": {
+    "streetAddress": "Near Bus Stand, NH-34",
+    "addressLocality": "Dhanaura",
+    "addressRegion": "Amroha",
+    "postalCode": "244231",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "latitude": "YOUR_LATITUDE",
+    "longitude": "YOUR_LONGITUDE"
+  },
+  "url": "https://gillhospital.com",
+  "telephone": "+91-9557743893",
+  "category": "Hospital",
+  "openingHours": [
+    "Monday 09:00-20:00",
+    "Tuesday 09:00-20:00",
+    "Wednesday 09:00-20:00",
+    "Thursday 09:00-20:00",
+    "Friday 09:00-20:00",
+    "Saturday 09:00-20:00",
+    "Sunday Emergency Only"
+  ],
+  "keywords": [
+    "Gill Hospital",
+    "Dr Avnish Kumar Gill",
+    "Hospital Dhanaura",
+    "Laparoscopic Surgery Amroha",
+    "Best Hospital Dhanaura",
+    "Emergency Hospital Amroha"
+  ]
+}
