@@ -7812,6 +7812,7 @@ link[rel="shortcut icon"] {
   padding: 12px;
   top: -55px;
   right: 0;
+  margin-top: 10px !important;
   cursor: pointer;
   color: #1c19a0;
   text-decoration: none;
