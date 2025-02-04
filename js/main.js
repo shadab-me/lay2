@@ -26,7 +26,21 @@
   // meanmenu
   $("#mobile-menu").meanmenu({
     meanMenuContainer: ".mobile-menu",
-    meanScreenWidth: "992",
+    meanScreenWidth: "991",
+    meanExpand: "+",
+    meanContract: "×",
+    meanDisplay: "block",
+    removeElements: "#mobile-menu",
+    meanExpandHeight: true,
+    meanMenuOpen: "<span></span><span></span><span></span>",
+    meanMenuClose: "×",
+    meanRevealPosition: "right",
+    meanShowChildren: true,
+    meanExpandableChildren: true,
+    meanRemoveAttrs: true,
+    onePage: true,
+    meanEffect: "slide",
+    meanSpeed: 300,
   });
 
   $(".info-bar").on("click", function () {

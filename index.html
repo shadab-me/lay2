@@ -181,15 +181,42 @@
                         <div class="col-12">
                             <div class="mobile-menu mean-container">
                                 <div class="mean-bar">
-                                    <a href="#nav" class="meanmenu-reveal"
-                                        onclick="this.parentElement.querySelector('.mean-nav ul').style.display = this.parentElement.querySelector('.mean-nav ul').style.display === 'none' ? 'block' : 'none'"
+                                    <a href="#nav" class="meanmenu-reveal" onclick="
+                                            var nav = this.parentElement.querySelector('.mean-nav ul');
+                                            var isHidden = nav.style.display === 'none';
+                                            if(isHidden) {
+                                                nav.style.display = 'block';
+                                                nav.style.opacity = '0';
+                                                nav.style.transform = 'translateY(-10px)';
+                                            nav.style.transition = 'all 0.3s ease-in-out';
+                                                setTimeout(() => {
+                                                    nav.style.opacity = '1';
+                                                    nav.style.transform = 'translateY(0)';
+                                                }, 10);
+                                            } else {
+                                                nav.style.opacity = '0';
+                                                nav.style.transform = 'translateY(-10px)';
+                                                setTimeout(() => {
+                                                    nav.style.display = 'none';
+                                                }, 300);
+                                            }
+                                            this.classList.toggle('meanclose');
+                                            if(isHidden) {
+                                                this.innerHTML = '×';
+                                                this.style.fontSize = '30px';
+                                                this.style.fontWeight = '300';
+                                            } else {
+                                                this.innerHTML = '<span></span><span></span><span></span>';
+                                            }
+                                        "
                                         style="right: 0px; left: auto; text-align: center; text-indent: 0px; font-size: 18px;">
                                         <span></span>
                                         <span></span>
                                         <span></span>
                                     </a>
                                     <nav class="mean-nav">
-                                        <ul style="display: none;">
+                                        <ul
+                                            style="display: none; transition: all 0.3s ease-in-out; opacity: 1; transform: translateY(0);">
                                             <li class="has-sub">
                                                 <a href="index.html">Home</a>
                                             </li>
@@ -222,11 +249,11 @@
         <!-- slider-area -->
         <section id="home" class="slider-area fix p-relative">
             <div class="slider-active">
-                <div class="single-slider slider-bg slider-bg-1 d-flex align-items-center">
+                <div class="single-slider slider-bg slider-bg-1 d-flex align-items-center" style="padding: 100px 0;">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
-                                <div class="slider-content s-slider-content text-left">
+                                <div class="slider-content s-slider-content text-left" style="padding-bottom: 30px;">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Trusted Surgical & Gynecological Care
                                         in Amroha</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">At Gill Clinic, Dr. Avnish Kumar Gill
@@ -241,11 +268,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="single-slider slider-bg slider-bg-2 d-flex align-items-center">
+                <div class="single-slider slider-bg slider-bg-2 d-flex align-items-center" style="padding: 100px 0;">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
-                                <div class="slider-content s-slider-content text-left">
+                                <div class="slider-content s-slider-content text-left" style="padding-bottom: 30px;">
                                     <h2 data-animation="fadeInUp" data-delay=".4s">24/7 Emergency Care in Dhanaura</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">Your family's health partner for
                                         critical care, diagnostics, and affordable treatment plans. Accredited facility
@@ -268,11 +295,10 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="about-content s-about-content pl-30">
+                        <div class="about-content s-about-content pl-30 pb-30">
                             <div class="section-title mb-20">
                                 <span>About Gill Clinic</span>
                                 <h2>
-
                                     Pioneers in Surgical Excellence & Women's Health
                                 </h2>
                             </div>
@@ -294,21 +320,22 @@
                                     <div class="text">Affordable care with zero hidden costs</div>
                                 </li>
                             </ul>
-                            <div class="slider-btn mt-30">
-                                <a href="#about" class="btn ss-btn">Our Legacy <i class="fas fa-chevron-right"></i></a>
+                            <div class="slider-btn mt-50">
+                                <a href="#about" class="btn ss-btn" style="margin-bottom: 30px;">Our Legacy <i
+                                        class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="/img/aboutgill.jpg" alt="About Gill Clinic" class="img-fluid rounded">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="about-img" style="padding: 20px;">
+                            <img src="/img/aboutgill.jpg" alt="About Gill Clinic" class="img-fluid rounded"
+                                style="box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- about-area-end -->
-
         <!-- services-area -->
         <section id="departments" class="services-area services-bg services-two pt-20 pb-55"
             style="background-image:url(img/an-bg/an-bg02.png); background-size: contain; background-repeat: no-repeat;background-position: center center;">
