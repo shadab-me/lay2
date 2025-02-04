@@ -31,111 +31,6 @@
     <link rel="stylesheet" href="css/meanmenu.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-        /* Custom arrow styles */
-        .slider-active .slick-prev,
-        .slider-active .slick-next {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid #fff;
-            border-radius: 50%;
-            z-index: 1;
-            transition: all 0.3s ease;
-            opacity: 0;
-        }
-
-        .slider-active:hover .slick-prev,
-        .slider-active:hover .slick-next {
-            opacity: 1;
-        }
-
-        .slider-active .slick-prev:hover,
-        .slider-active .slick-next:hover {
-            background: #3a7afe;
-            border-color: #3a7afe;
-        }
-
-        .slider-active .slick-prev:before,
-        .slider-active .slick-next:before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 22px;
-            color: #fff;
-            opacity: 1;
-            line-height: 35px;
-        }
-
-        .slider-active .slick-prev {
-            left: 50px;
-        }
-
-        .slider-active .slick-next {
-            right: 50px;
-        }
-
-        /* Testimonial slider arrows */
-        .testimonial-active .slick-prev,
-        .testimonial-active .slick-next {
-            width: 50px;
-            height: 50px;
-            background: #f5f8ff;
-            border-radius: 50%;
-            z-index: 1;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-active .slick-prev:hover,
-        .testimonial-active .slick-next:hover {
-            background: #3a7afe;
-        }
-
-        .testimonial-active .slick-prev:before,
-        .testimonial-active .slick-next:before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-size: 20px;
-            color: #3a7afe;
-            opacity: 1;
-        }
-
-        .testimonial-active .slick-prev:hover:before,
-        .testimonial-active .slick-next:hover:before {
-            color: #fff;
-        }
-
-        .testimonial-active .slick-prev {
-            left: -60px;
-        }
-
-        .testimonial-active .slick-next {
-            right: -60px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Offset for fixed header */
-        :target {
-            scroll-margin-top: 100px;
-        }
-
-        /* Add these styles to your existing style block */
-        .section-title h2 {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .section-title h2 img {
-            transition: transform 0.3s ease;
-        }
-
-        .section-title h2 img:hover {
-            transform: scale(1.1);
-        }
-    </style>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -284,7 +179,37 @@
                         <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                         </div>
                         <div class="col-12">
-                            <div class="mobile-menu"></div>
+                            <div class="mobile-menu mean-container">
+                                <div class="mean-bar">
+                                    <a href="#nav" class="meanmenu-reveal"
+                                        onclick="this.parentElement.querySelector('.mean-nav ul').style.display = this.parentElement.querySelector('.mean-nav ul').style.display === 'none' ? 'block' : 'none'"
+                                        style="right: 0px; left: auto; text-align: center; text-indent: 0px; font-size: 18px;">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                    <nav class="mean-nav">
+                                        <ul style="display: none;">
+                                            <li class="has-sub">
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li class="has-sub">
+                                                <a href="departments.html">Departments</a>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="blog.html">Blog</a>
+                                            </li>
+                                            <li class="has-sub">
+                                                <a href="news.html">News</a>
+                                            </li>
+                                            <li class="has-sub mean-last">
+                                                <a href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -297,8 +222,7 @@
         <!-- slider-area -->
         <section id="home" class="slider-area fix p-relative">
             <div class="slider-active">
-                <div class="single-slider slider-bg d-flex align-items-center"
-                    style="background-image:url(img/slider/slider_img01.jpg)">
+                <div class="single-slider slider-bg slider-bg-1 d-flex align-items-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -317,8 +241,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="single-slider slider-bg d-flex align-items-center"
-                    style="background-image:url(img/slider/slider_img02.jpg)">
+                <div class="single-slider slider-bg slider-bg-2 d-flex align-items-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
@@ -377,9 +300,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="about-img pl-30">
-                            <img src="/img/aboutgill.jpg" alt="About Gill Clinic" class="img-fluid rounded"
-                                style="width: 100%; height: auto; object-fit: cover;">
+                        <div class="about-img">
+                            <img src="/img/aboutgill.jpg" alt="About Gill Clinic" class="img-fluid rounded">
                         </div>
                     </div>
                 </div>
@@ -406,7 +328,7 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="s-single-services text-center active">
                             <div class="services-icon">
-                                <img src="img/icon/sr-icon01.png" alt="Online Emergency">
+                                <i class="fas fa-file-medical service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5><a href="services-detail.html">Online Emergency</a></h5>
@@ -418,7 +340,7 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="s-single-services text-center">
                             <div class="services-icon">
-                                <img src="img/icon/sr-icon02.png" alt="Medication Service">
+                                <i class="fas fa-rupee-sign service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5><a href="services-detail.html">Medication Service</a></h5>
@@ -430,7 +352,7 @@
                     <div class="col-lg-4 col-md-12">
                         <div class="s-single-services text-center">
                             <div class="services-icon">
-                                <img src="img/icon/sr-icon03.png" alt="24hr Health Program">
+                                <i class="fas fa-notes-medical service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5><a href="services-detail.html">24hr Health Program</a></h5>
@@ -670,7 +592,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="s-single-services text-center mb-30">
                             <div class="services-icon">
-                                <i class="fas fa-file-medical" style="font-size: 40px; color: #3a7afe;"></i>
+                                <i class="fas fa-file-medical service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5>Medical Records</h5>
@@ -681,7 +603,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="s-single-services text-center mb-30">
                             <div class="services-icon">
-                                <i class="fas fa-rupee-sign" style="font-size: 40px; color: #3a7afe;"></i>
+                                <i class="fas fa-rupee-sign service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5>Transparent Pricing</h5>
@@ -692,7 +614,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="s-single-services text-center mb-30">
                             <div class="services-icon">
-                                <i class="fas fa-notes-medical" style="font-size: 40px; color: #3a7afe;"></i>
+                                <i class="fas fa-notes-medical service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5>Health Tips</h5>
@@ -703,7 +625,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="s-single-services text-center mb-30">
                             <div class="services-icon">
-                                <i class="fas fa-calendar-check" style="font-size: 40px; color: #3a7afe;"></i>
+                                <i class="fas fa-calendar-check service-icon"></i>
                             </div>
                             <div class="second-services-content">
                                 <h5>Quick Appointments</h5>
@@ -1043,7 +965,7 @@
     <!-- footer -->
     <footer class="footer-bg footer-p">
         <div class="overly"><img src="img/an-bg/footer-bg.png" alt="rest"></div>
-        <div class="footer-top pb-30" style="background-color: #ECF1FA;">
+        <div class="footer-top pb-30">
             <div class="container">
                 <div class="row justify-content-between">
                     <!-- About/Logo Column -->
