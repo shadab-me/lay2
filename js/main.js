@@ -11,11 +11,39 @@
   // sticky
   $(window).on("scroll", function () {
     var scroll = $(window).scrollTop();
-    if (scroll < 200) {
-      $("#header-sticky").removeClass("sticky-menu");
-    } else {
+    if (scroll > 100) {
       $("#header-sticky").addClass("sticky-menu");
+      $(".menu-area").addClass("sticky-menu");
+      $(".header-area").addClass("sticky");
+      $("body").addClass("has-sticky-menu");
+    } else {
+      $("#header-sticky").removeClass("sticky-menu");
+      $(".menu-area").removeClass("sticky-menu");
+      $(".header-area").removeClass("sticky");
+      $("body").removeClass("has-sticky-menu");
     }
+  });
+
+  // Initialize sticky menu on page load
+  $(document).ready(function () {
+    // Force initial check of scroll position
+    var scroll = $(window).scrollTop();
+    if (scroll > 100) {
+      $("#header-sticky").addClass("sticky-menu");
+      $(".menu-area").addClass("sticky-menu");
+      $(".header-area").addClass("sticky");
+      $("body").addClass("has-sticky-menu");
+    }
+
+    // Force recalculation after a short delay to ensure proper initialization
+    setTimeout(function () {
+      $(window).trigger("scroll");
+    }, 100);
+
+    // Additional check after all images and resources are loaded
+    $(window).on("load", function () {
+      $(window).trigger("scroll");
+    });
   });
 
   // RESPONSIVE MENU
@@ -561,5 +589,10 @@
         },
       },
     ],
+  });
+
+  // Ensure menu works on mobile
+  $(".meanmenu-reveal").on("click", function () {
+    $(this).toggleClass("meanclose");
   });
 })(jQuery);

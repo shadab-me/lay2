@@ -652,17 +652,35 @@
     margin-top: 100px;
     height: 757px;
   }
-  .logo,
-  .logo2,
-  .logo3 {
-    background: #fff;
+  .logo {
+    background: transparent;
     height: auto;
     margin-top: 0;
-    line-height: inherit;
-    padding: 0 10px;
-    width: 52%;
+    line-height: normal;
+    padding: 10px;
   }
-
+  .logo img {
+    display: none;
+  }
+  .logo:after {
+    content: "GILL HOSPITAL";
+    color: #013243;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Titillium Web", sans-serif;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+  }
+  .menu-area {
+    padding: 5px 0;
+  }
+  .menu-area::before {
+    height: auto;
+  }
+  .sticky-menu .logo {
+    margin-top: 0;
+    line-height: normal;
+    height: auto;
+  }
   .slider-price {
     display: none;
   }
@@ -1422,7 +1440,7 @@
 
 .mean-nav {
   background: #fff !important;
-  margin-top: 45px !important;
+  margin-top: 12px !important;
   z-index: 99999;
 }
 
