@@ -56,7 +56,7 @@
     meanMenuContainer: ".mobile-menu",
     meanScreenWidth: "991",
     meanExpand: "+",
-    meanContract: "×",
+    meanContract: "-",
     meanDisplay: "block",
     removeElements: "#mobile-menu",
     meanExpandHeight: true,
